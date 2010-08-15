@@ -1,0 +1,22 @@
+<html>
+<head><title>Canvas Zoom test</title></head>
+<body>
+<h1>Canvas Zoom Test</h1>
+<p>
+	<canvas id="zoomCanvas" width="400" height="200">You need a browser with the HTML5 Canvas ability.</canvas><br/>
+
+	<input type="button" value="Zoom in" onclick="galaxy.zoomInCentre()"/>
+	<input type="button" value="Zoom out" onclick="galaxy.zoomOutCentre()"/>
+
+	<a href="http://hubblesite.org/newscenter/archive/releases/2005/01/image/a/">Image of Spiral Galaxy NGC 1300 from Hubble Site</a>
+</p>
+</body>
+<foot>
+	<script type="text/javascript" src="imageloader.js"></script>
+	<script type="text/javascript" src="canvaszoom.js"></script>
+	<script type="text/javascript">
+		var galaxy = new CanvasZoom( document.getElementById('zoomCanvas'), "tile-test", 766, 473 );
+	</script>
+</foot>
+</html>
+
