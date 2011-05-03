@@ -2,7 +2,9 @@
 CanavsZoom
 ==========
 
-Zooming of very large images with the Javascript, html5 and the canvas element. (Similar in functionality to Zoomify, OpenZoom or DeepZoom). This is open source (though I'm yet to add a specific licence). Use it as you see fit, though an attribution would be appreciated!
+Zooming of very large images with the Javascript, html5 and the canvas element. (Similar in functionality to Zoomify, OpenZoom or DeepZoom). This is open source MIT license. Use it as you see fit (an attribution would be appreciated!).
+
+It should work on Opera, Firefox, Chrome, Safari and IE9; and any other browser which supports the HTML5 2D canvas.
 
 
 Details
@@ -22,7 +24,7 @@ The back end part of the system consists of several folders full of images of di
 
       Once it's finished open the folder you saved to. Open the subfolder "dzc_output_images", the subfolder ending in "_files" is the one you need to copy to your web server. (If you have a look in the folder you can see you images cut up into smaller sections at different zoom levels).
 
-   2. Add the javascript to your webpage, you'll need to get the imageloader.js file from here http://github.com/akademy/ImageLoader
+   2. Add the javascript to your webpage, you'll also need to get the imageloader.js file from here http://github.com/akademy/ImageLoader
 
       <script type="text/javascript" src="imageloader.js"></script>
       <script type="text/javascript" src="canvaszoom.js"></script>

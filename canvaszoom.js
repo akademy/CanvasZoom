@@ -1,8 +1,31 @@
 /*
+The MIT License
+
+Copyright (c) 2011 Matthew Wilcoxson (www.akademy.co.uk)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+/*
 CanvasZoom
 By Matthew Wilcoxson
 
-Description:    Zooming of very large images with Javascript, HTML5 and the canvas element.
+Description:    Zooming of very large images with Javascript, HTML5 and the canvas element (based on DeepZoom format).
 Website:        http://www.akademy.co.uk/software/canvaszoom/canvaszoom.php
 Version:        1.0
 
@@ -46,19 +69,19 @@ function CanvasZoom( canvas, tilesFolder, imageWidth, imageHeight )
 
 	var _ctx = null;
 
-    var getTileFile, getEvent, 
-            zoom, zoomIn, zoomOut,
-            mousePosX, mousePosY, 
-                mouseUp, mouseMove, mouseUpWindow, mouseMoveWindow,
-                mouseDown, mouseOut, mouseOver,mouseWheel,
-            initialTilesLoaded, calculateNeededTiles, getTiles, tileLoaded,
-            paint;
+	var getTileFile, getEvent, 
+		zoom, zoomIn, zoomOut,
+		mousePosX, mousePosY, 
+			mouseUp, mouseMove, mouseUpWindow, mouseMoveWindow,
+			mouseDown, mouseOut, mouseOver,mouseWheel,
+		initialTilesLoaded, calculateNeededTiles, getTiles, tileLoaded,
+		paint;
             
 	getTileFile = function( zoom, column, row ) {
 		return tilesFolder + "/" + zoom + "/" + column + "_" + row + ".jpg";
 	};
 
-    initialTilesLoaded = function() {
+	initialTilesLoaded = function() {
 		
 		var tileZoomLevel = _tileZoomArray[_zoomLevel];
 		
