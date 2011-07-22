@@ -6,6 +6,7 @@ Zooming of very large images with the Javascript, html5 and the canvas element. 
 
 It should work on Opera, Firefox, Chrome, Safari and IE9; and any other browser which supports the HTML5 2D canvas.
 
+Main code updates now on BitBucket: https://bitbucket.org/akademy/canvaszoom/overview
 
 Details
 -------
